@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APEX Sport Help — Updating Content" />
+  <meta name="keywords" content="APEX Sport help, Updating Content" />
+  <title>Updating Content — APEX Sport Help</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="logo">APE<span>X</span></a>
+      <ul class="nav-links">
+        <li><a href="../pages/products.html">Shop</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="index.html">Help</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cart-count">0</span></button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <a href="../pages/login.html" class="nav-icon-btn" aria-label="Login"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+    <a href="../pages/products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../pages/about.html" onclick="toggleMenu()">About</a>
+    <a href="index.html" onclick="toggleMenu()">Help</a>
+  </div>
+  <div class="page-wrapper">
+    <div class="breadcrumb"><a href="index.html">Help</a> / Updating Content</div>
+    <h1 class="page-title">Updating Content</h1>
+    <div class="help-nav">
+      <a href="getting-started.html">Getting Started</a>
+      <a href="browsing-products.html">Browsing Products</a>
+      <a href="cart-checkout.html">Cart &amp; Checkout</a>
+      <a href="account-management.html">Account Management</a>
+      <a href="updating-content.html">Updating Content</a>
+    </div>
+    <div class="help-content">
+      <h2>How to Update Site Content</h2>
+      <p>This guide is for site administrators who need to add, remove, or modify products and media.</p>
+      <h3>Adding a New Product</h3>
+      <p>Open <code>js/main.js</code> and locate the <code>products</code> array at the top. Add a new object with the fields: id, name, category, price, option, and img. Then create a matching product detail HTML file in the <code>pages/products/</code> folder.</p>
+      <h3>Changing Product Info</h3>
+      <p>Find the product in the <code>products</code> array by its id and edit the name, price, option, or category fields. Save the file — the shop page and search will update automatically.</p>
+      <h3>Updating Images</h3>
+      <p>Place new images in the <code>images/</code> directory. Reference them by filename in the product object or directly in HTML. Use copyright-free images only.</p>
+      <h3>Changing Themes</h3>
+      <p>Theme CSS variables are defined in <code>css/styles.css</code> under <code>:root</code>, <code>[data-theme="dark"]</code>, and <code>[data-theme="midnight"]</code>. Modify colors there to customize any theme.</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div>
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

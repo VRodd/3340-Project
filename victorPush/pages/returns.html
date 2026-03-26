@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APEX Sport — Returns &amp; Exchanges" />
+  <meta name="keywords" content="APEX Sport, Returns &amp; Exchanges" />
+  <title>Returns &amp; Exchanges — APEX Sport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="logo">APE<span>X</span></a>
+      <ul class="nav-links">
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="../wiki/index.html">Help</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cart-count">0</span></button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <a href="login.html" class="nav-icon-btn" aria-label="Login"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+    <a href="products.html" onclick="toggleMenu()">Shop</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="../wiki/index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Returns &amp; Exchanges</div>
+    <h1 class="page-title">Returns &amp; Exchanges</h1>
+    <div class="static-content">
+      <h2>Return Policy</h2>
+      <p>We accept returns within 30 days of delivery for unused items in original packaging. Items must be free of damage, odors, and signs of use.</p>
+      <h2>How to Return</h2>
+      <p>Contact us through the <a href="contact.html" style="color:var(--accent); font-weight:600;">Contact page</a> with your order number and reason for return. We will provide a return shipping label and instructions.</p>
+      <h2>Exchanges</h2>
+      <p>To exchange an item, initiate a return and place a new order for the replacement product. This ensures the fastest processing time.</p>
+      <h2>Refund Timeline</h2>
+      <p>Refunds are processed within 5–7 business days after we receive and inspect the returned item. The refund will be credited to the original payment method.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div>
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
