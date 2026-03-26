@@ -3,49 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ergonomic Barbell Pad — $35 at APEX Sport. Anti-slip with straps." />
-  <meta name="keywords" content="Ergonomic Barbell Pad, Strength, APEX Sport, fitness gear" />
+  <meta name="description" content="Ergonomic Barbell Pad — $35 at APEX Sport. Anti-slip with straps." /> <!-- SEO description -->
+  <meta name="keywords" content="Ergonomic Barbell Pad, Strength, APEX Sport, fitness gear" /> <!-- SEO keywords -->
   <title>Ergonomic Barbell Pad — APEX Sport</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- Fonts -->
+  <link rel="stylesheet" href="../../css/styles.css" /> <!-- Main stylesheet -->
 </head>
 <body>
   <nav>
     <div class="nav-inner">
-      <a href="../../index.html" class="logo">APE<span>X</span></a>
+      <a href="../../index.html" class="logo">APE<span>X</span></a> <!-- Logo link -->
       <ul class="nav-links">
         <li><a href="../products.html">Shop</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../../wiki/index.html">Help</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
-        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cart-count">0</span></button>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-        <a href="../login.html" class="nav-icon-btn" aria-label="Login"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"> <!-- Search button -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"> <!-- Cart button -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span> <!-- Shows number of items in cart -->
+        </button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"> <!-- Mobile menu toggle -->
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="../login.html" class="nav-icon-btn" aria-label="Login"></a> <!-- Login link -->
       </div>
     </div>
   </nav>
-  <div class="mobile-menu" id="mobile-menu">
+
+  <div class="mobile-menu" id="mobile-menu"> <!-- Mobile menu for small screens -->
     <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
     <a href="../products.html" onclick="toggleMenu()">Shop</a>
     <a href="../about.html" onclick="toggleMenu()">About</a>
     <a href="../../wiki/index.html" onclick="toggleMenu()">Help</a>
   </div>
 
-  <div class="product-detail">
+  <div class="product-detail"> <!-- Product section -->
     <div class="product-detail-img">
-      <img src="../../images/barbellPads.png" alt="Ergonomic Barbell Pad">
+      <img src="../../images/barbellPads.png" alt="Ergonomic Barbell Pad"> <!-- Product image -->
     </div>
     <div class="product-detail-info">
-      <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../products.html">Shop</a> / Ergonomic Barbell Pad</div>
-      <span class="detail-category">Strength</span>
+      <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../products.html">Shop</a> / Ergonomic Barbell Pad</div> <!-- Breadcrumb navigation -->
+      <span class="detail-category">Strength</span> <!-- Product category -->
       <h1>Ergonomic Barbell Pad</h1>
-      <div class="detail-price">$35</div>
+      <div class="detail-price">$35</div> <!-- Product price -->
       <p class="detail-desc">Ergonomic design with anti-slip grip and secure straps. Distributes barbell weight evenly across your shoulders and traps during heavy squats.</p>
       <div class="detail-option"><strong>Selected Option:</strong> Anti-slip with straps</div>
-      <button class="btn-add-cart" onclick="addToCart(3)">Add to Cart</button>
+      <button class="btn-add-cart" onclick="addToCart(3)">Add to Cart</button> <!-- Add to cart button -->
     </div>
   </div>
 
@@ -53,12 +61,13 @@
     <div class="footer-inner">
       <div class="footer-top" style="display:flex; justify-content:center;">
         <div style="text-align:center; max-width:420px;">
-          <div class="footer-logo">APE<span>X</span></div>
+          <div class="footer-logo">APE<span>X</span></div> <!-- Footer logo -->
           <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
         </div>
       </div>
     </div>
   </footer>
-  <script src="../../js/main.js"></script>
+
+  <script src="../../js/main.js"></script> <!-- Main JS file -->
 </body>
 </html>
