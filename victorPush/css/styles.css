@@ -1,4 +1,5 @@
 :root {
+  /* Theme variables: controls colors, fonts, and general styling across the site */
   --bg: #f5f4f0;
   --surface: #ffffff;
   --text-primary: #0d0d0d;
@@ -13,16 +14,19 @@
   --transition: 0.22s ease;
 }
 
+/* Reset default browser styles for consistency */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Enables smooth scrolling when using anchor links */
 html {
   scroll-behavior: smooth;
 }
 
+/* Base page styling (font, colors, spacing) */
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -32,21 +36,25 @@ body {
   line-height: 1.5;
 }
 
+/* Removes default link styling */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Makes images responsive */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* Standard button setup */
 button {
   cursor: pointer;
   font-family: var(--font-body);
 }
 
+/* Navigation bar (sticky at top) */
 nav {
   position: sticky;
   top: 0;
@@ -57,6 +65,7 @@ nav {
   transition: background var(--transition);
 }
 
+/* Navigation container layout */
 .nav-inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -67,6 +76,7 @@ nav {
   height: 64px;
 }
 
+/* Logo styling */
 .logo {
   font-family: var(--font-display);
   font-size: 28px;
@@ -74,16 +84,19 @@ nav {
   color: var(--text-primary);
 }
 
+/* Highlighted part of logo */
 .logo span {
   color: var(--accent);
 }
 
+/* Navigation links container */
 .nav-links {
   display: flex;
   gap: 32px;
   list-style: none;
 }
 
+/* Individual nav links */
 .nav-links a {
   font-size: 13px;
   font-weight: 500;
@@ -93,16 +106,19 @@ nav {
   transition: color var(--transition);
 }
 
+/* Hover effect for nav links */
 .nav-links a:hover {
   color: var(--text-primary);
 }
 
+/* Right side icons (cart, search, etc.) */
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Icon buttons */
 .nav-icon-btn {
   background: none;
   border: none;
@@ -113,10 +129,12 @@ nav {
   position: relative;
 }
 
+/* Hover effect for icon buttons */
 .nav-icon-btn:hover {
   background: var(--border);
 }
 
+/* Cart item counter badge */
 .cart-count {
   position: absolute;
   top: 2px;
@@ -133,6 +151,7 @@ nav {
   justify-content: center;
 }
 
+/* Hamburger menu (only visible on mobile) */
 .hamburger {
   display: none;
   background: none;
@@ -141,6 +160,7 @@ nav {
   color: var(--text-primary);
 }
 
+/* Hero section layout */
 .hero {
   max-width: 1280px;
   margin: 0 auto;
@@ -152,6 +172,7 @@ nav {
   min-height: 520px;
 }
 
+/* Small top label in hero */
 .hero-eyebrow {
   font-size: 11px;
   font-weight: 600;
@@ -161,6 +182,7 @@ nav {
   margin-bottom: 16px;
 }
 
+/* Main hero title */
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(52px, 6.5vw, 82px);
@@ -169,11 +191,13 @@ nav {
   margin-bottom: 22px;
 }
 
+/* Highlighted word in title */
 .hero-title em {
   font-style: normal;
   color: var(--accent);
 }
 
+/* Hero description text */
 .hero-subtitle {
   font-size: 16px;
   color: var(--text-secondary);
@@ -182,12 +206,14 @@ nav {
   margin-bottom: 32px;
 }
 
+/* Button group in hero */
 .hero-ctas {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
 
+/* Primary button style */
 .btn-primary {
   background: var(--text-primary);
   color: var(--bg);
@@ -201,11 +227,13 @@ nav {
   transition: background var(--transition), transform 0.15s;
 }
 
+/* Button hover effect */
 .btn-primary:hover {
   background: var(--accent);
   transform: translateY(-1px);
 }
 
+/* Hero image container */
 .hero-visual {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -216,6 +244,7 @@ nav {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
 }
 
+/* Inner layout for hero image */
 .hero-img-inner {
   width: 100%;
   height: 100%;
@@ -226,6 +255,7 @@ nav {
   background: linear-gradient(135deg, #f0ede8 0%, #e8e4de 100%);
 }
 
+/* Text inside hero image */
 .hero-visual-label {
   font-family: var(--font-display);
   font-size: 20px;
@@ -234,12 +264,14 @@ nav {
   opacity: 0.5;
 }
 
+/* Subtext inside hero image */
 .hero-visual-sub {
   font-size: 13px;
   color: var(--text-secondary);
   margin-top: 6px;
 }
 
+/* Badge in top corner of hero image */
 .hero-badge {
   position: absolute;
   top: 14px;
@@ -254,6 +286,7 @@ nav {
   border-radius: var(--radius);
 }
 
+/* Mobile full-screen menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -268,10 +301,12 @@ nav {
   gap: 0;
 }
 
+/* When menu is open */
 .mobile-menu.open {
   display: flex;
 }
 
+/* Links inside mobile menu */
 .mobile-menu a {
   font-family: var(--font-display);
   font-size: 40px;
@@ -282,10 +317,12 @@ nav {
   transition: color var(--transition);
 }
 
+/* Hover effect for mobile menu links */
 .mobile-menu a:hover {
   color: var(--accent);
 }
 
+/* Close button for mobile menu */
 .mobile-close {
   position: absolute;
   top: 20px;
@@ -296,6 +333,7 @@ nav {
   color: var(--text-secondary);
 }
 
+/* Footer styling */
 footer {
   background: var(--surface);
   border-top: 1px solid var(--border);
@@ -303,11 +341,13 @@ footer {
   margin-top: 0;
 }
 
+/* Footer container */
 .footer-inner {
   max-width: 1280px;
   margin: 0 auto;
 }
 
+/* Top section of footer layout */
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -315,6 +355,7 @@ footer {
   margin-bottom: 44px;
 }
 
+/* Footer logo */
 .footer-logo {
   font-family: var(--font-display);
   font-size: 30px;
@@ -323,10 +364,12 @@ footer {
   color: var(--text-primary);
 }
 
+/* Highlight in footer logo */
 .footer-logo span {
   color: var(--accent);
 }
 
+/* Footer description text */
 .footer-tagline {
   font-size: 14px;
   color: var(--text-secondary);
@@ -335,11 +378,13 @@ footer {
   max-width: 270px;
 }
 
+/* Newsletter input + button row */
 .newsletter-row {
   display: flex;
   gap: 8px;
 }
 
+/* Email input field */
 .newsletter-input {
   flex: 1;
   background: var(--bg);
@@ -353,10 +398,12 @@ footer {
   transition: border-color var(--transition);
 }
 
+/* Input focus effect */
 .newsletter-input:focus {
   border-color: var(--accent);
 }
 
+/* Newsletter subscribe button */
 .newsletter-btn {
   background: var(--accent);
   color: white;
@@ -370,45 +417,56 @@ footer {
   transition: background var(--transition);
 }
 
+/* Button hover effect */
 .newsletter-btn:hover {
   background: var(--accent-hover);
 }
 
+/* Tablet adjustments */
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
   .hamburger {
     display: block;
   }
+
   .hero {
     grid-template-columns: 1fr;
     padding: 32px 24px;
     min-height: auto;
   }
+
   .hero-visual {
     display: none;
   }
+
   .footer-top {
-    grid-template-columns: 1fr; gap: 28px;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
+/* Small screen tweaks */
 @media (max-width: 480px) {
   .hero-stats {
     gap: 20px;
   }
+
   .hero-ctas {
     flex-direction: column;
   }
 }
 
+/* Dark theme variables */
 [data-theme="dark"] {
   --bg: #121212;
   --surface: #1a1a1a;
@@ -420,6 +478,7 @@ footer {
   --nav-bg: rgba(18, 18, 18, 0.92);
 }
 
+/* Alternate theme (midnight) */
 [data-theme="midnight"] {
   --bg: #0b1120;
   --surface: #131b2e;
@@ -431,6 +490,7 @@ footer {
   --nav-bg: rgba(11, 17, 32, 0.92);
 }
 
+/* Page container */
 .page-wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -438,6 +498,7 @@ footer {
   min-height: 60vh;
 }
 
+/* Page heading */
 .page-title {
   font-family: var(--font-display);
   font-size: clamp(36px, 5vw, 56px);
@@ -445,18 +506,21 @@ footer {
   margin-bottom: 8px;
 }
 
+/* Page subtitle */
 .page-subtitle {
   font-size: 15px;
   color: var(--text-secondary);
   margin-bottom: 32px;
 }
 
+/* Product grid layout */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
+/* Individual product card */
 .product-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -466,11 +530,13 @@ footer {
   display: block;
 }
 
+/* Hover effect for product */
 .product-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
+/* Product image container */
 .product-img {
   aspect-ratio: 4/3;
   background: linear-gradient(135deg, #f0ede8 0%, #e8e4de 100%);
@@ -479,11 +545,13 @@ footer {
   justify-content: center;
 }
 
+/* Dark + midnight theme override for product images */
 [data-theme="dark"] .product-img,
 [data-theme="midnight"] .product-img {
   background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
 }
 
+/* Placeholder text inside product image */
 .product-img-placeholder {
   font-family: var(--font-display);
   font-size: 48px;
@@ -491,10 +559,12 @@ footer {
   opacity: 0.3;
 }
 
+/* Product info container */
 .product-info {
   padding: 16px;
 }
 
+/* Product category label */
 .product-category {
   font-size: 11px;
   font-weight: 600;
@@ -503,6 +573,7 @@ footer {
   color: var(--accent);
 }
 
+/* Product title */
 .product-info h3 {
   font-family: var(--font-display);
   font-size: 20px;
@@ -510,17 +581,20 @@ footer {
   margin: 4px 0;
 }
 
+/* Product option text (e.g., size/type) */
 .product-option {
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
+/* Product price styling */
 .product-price {
   font-weight: 600;
   font-size: 16px;
 }
 
+/* Filter buttons container */
 .filter-bar {
   display: flex;
   gap: 8px;
@@ -528,6 +602,7 @@ footer {
   flex-wrap: wrap;
 }
 
+/* Individual filter button */
 .filter-btn {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -541,6 +616,7 @@ footer {
   transition: all var(--transition);
 }
 
+/* Active + hover state for filter buttons */
 .filter-btn:hover,
 .filter-btn.active {
   background: var(--text-primary);
@@ -548,6 +624,7 @@ footer {
   border-color: var(--text-primary);
 }
 
+/* Full screen search overlay */
 .search-overlay {
   position: fixed;
   inset: 0;
@@ -559,10 +636,12 @@ footer {
   padding-top: 120px;
 }
 
+/* When search is active */
 .search-overlay.active {
   display: flex;
 }
 
+/* Search input container */
 .search-box {
   background: var(--surface);
   border-radius: 8px;
@@ -574,6 +653,7 @@ footer {
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
+/* Search input field */
 .search-box input {
   flex: 1;
   background: var(--bg);
@@ -586,10 +666,12 @@ footer {
   outline: none;
 }
 
+/* Input focus effect */
 .search-box input:focus {
   border-color: var(--accent);
 }
 
+/* Search close / icon button */
 .search-box button {
   background: none;
   border: none;
@@ -598,6 +680,7 @@ footer {
   padding: 0 8px;
 }
 
+/* Search results dropdown */
 .search-results {
   background: var(--surface);
   border-radius: 0 0 8px 8px;
@@ -607,6 +690,7 @@ footer {
   overflow-y: auto;
 }
 
+/* Individual search result item */
 .search-result-item {
   display: flex;
   justify-content: space-between;
@@ -615,21 +699,25 @@ footer {
   transition: background var(--transition);
 }
 
+/* Hover effect for search result */
 .search-result-item:hover {
   background: var(--bg);
 }
 
+/* Search result name */
 .search-result-name {
   font-weight: 500;
   font-size: 14px;
 }
 
+/* Search result price */
 .search-result-price {
   font-weight: 600;
   color: var(--accent);
   font-size: 14px;
 }
 
+/* Toast notification (bottom popup) */
 #toast {
   position: fixed;
   bottom: 24px;
@@ -647,17 +735,20 @@ footer {
   pointer-events: none;
 }
 
+/* Visible toast state */
 #toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
+/* Form page layout */
 .form-page {
   max-width: 440px;
   margin: 0 auto;
   padding: 60px 24px;
 }
 
+/* Form container card */
 .form-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -665,6 +756,7 @@ footer {
   padding: 36px 32px;
 }
 
+/* Form title */
 .form-card h1 {
   font-family: var(--font-display);
   font-size: 32px;
@@ -672,16 +764,19 @@ footer {
   margin-bottom: 4px;
 }
 
+/* Form description text */
 .form-card p {
   font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 24px;
 }
 
+/* Form group (label + input) */
 .form-group {
   margin-bottom: 16px;
 }
 
+/* Form labels */
 .form-group label {
   display: block;
   font-size: 12px;
@@ -692,6 +787,7 @@ footer {
   margin-bottom: 6px;
 }
 
+/* Inputs, textareas, and dropdowns */
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -707,17 +803,20 @@ footer {
   transition: border-color var(--transition);
 }
 
+/* Focus state for form inputs */
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   border-color: var(--accent);
 }
 
+/* Textarea adjustments */
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
 }
 
+/* Full width button (submit) */
 .btn-full {
   width: 100%;
   background: var(--text-primary);
@@ -733,16 +832,19 @@ footer {
   margin-top: 8px;
 }
 
+/* Button hover */
 .btn-full:hover {
   background: var(--accent);
 }
 
+/* Cart page container */
 .cart-page {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 24px 60px;
 }
 
+/* Individual cart item */
 .cart-item {
   display: flex;
   align-items: center;
@@ -751,6 +853,7 @@ footer {
   border-bottom: 1px solid var(--border);
 }
 
+/* Product image in cart */
 .cart-item-img {
   width: 80px;
   height: 80px;
@@ -762,11 +865,13 @@ footer {
   flex-shrink: 0;
 }
 
+/* Dark mode cart image */
 [data-theme="dark"] .cart-item-img,
 [data-theme="midnight"] .cart-item-img {
   background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
 }
 
+/* Placeholder text inside cart image */
 .cart-item-img span {
   font-family: var(--font-display);
   font-size: 24px;
@@ -774,27 +879,32 @@ footer {
   opacity: 0.3;
 }
 
+/* Cart item details (name, description) */
 .cart-item-details {
   flex: 1;
 }
 
+/* Product name in cart */
 .cart-item-details h3 {
   font-family: var(--font-display);
   font-size: 18px;
   letter-spacing: 0.02em;
 }
 
+/* Product description in cart */
 .cart-item-details p {
   font-size: 13px;
   color: var(--text-secondary);
 }
 
+/* Quantity controls */
 .cart-item-qty {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Quantity buttons (+ / -) */
 .cart-item-qty button {
   width: 28px;
   height: 28px;
@@ -808,12 +918,14 @@ footer {
   color: var(--text-primary);
 }
 
+/* Quantity number */
 .cart-item-qty span {
   font-weight: 600;
   min-width: 20px;
   text-align: center;
 }
 
+/* Price per item */
 .cart-item-price {
   font-weight: 600;
   font-size: 16px;
@@ -821,6 +933,7 @@ footer {
   text-align: right;
 }
 
+/* Remove item button */
 .cart-item-remove {
   background: none;
   border: none;
@@ -830,10 +943,12 @@ footer {
   transition: color var(--transition);
 }
 
+/* Hover effect for remove */
 .cart-item-remove:hover {
   color: var(--accent);
 }
 
+/* Cart summary box */
 .cart-summary {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -842,6 +957,7 @@ footer {
   margin-top: 28px;
 }
 
+/* Rows inside summary */
 .cart-summary-row {
   display: flex;
   justify-content: space-between;
@@ -849,6 +965,7 @@ footer {
   font-size: 14px;
 }
 
+/* Total row styling */
 .cart-summary-row.total {
   font-family: var(--font-display);
   font-size: 24px;
@@ -858,22 +975,26 @@ footer {
   margin-bottom: 0;
 }
 
+/* Empty cart message */
 .cart-empty {
   text-align: center;
   padding: 60px 0;
 }
 
+/* Empty cart title */
 .cart-empty h2 {
   font-family: var(--font-display);
   font-size: 28px;
   margin-bottom: 8px;
 }
 
+/* Empty cart description */
 .cart-empty p {
   color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
+/* Product detail page layout */
 .product-detail {
   max-width: 1280px;
   margin: 0 auto;
@@ -884,6 +1005,7 @@ footer {
   align-items: start;
 }
 
+/* Product image section */
 .product-detail-img {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -894,6 +1016,7 @@ footer {
   justify-content: center;
 }
 
+/* Placeholder inside product detail image */
 .product-detail-img .placeholder {
   font-family: var(--font-display);
   font-size: 80px;
@@ -901,6 +1024,7 @@ footer {
   opacity: 0.2;
 }
 
+/* Product title in detail page */
 .product-detail-info h1 {
   font-family: var(--font-display);
   font-size: clamp(32px, 4vw, 48px);
@@ -908,6 +1032,7 @@ footer {
   margin-bottom: 4px;
 }
 
+/* Product category label (on detail page) */
 .product-detail-info .detail-category {
   font-size: 11px;
   font-weight: 600;
@@ -918,12 +1043,14 @@ footer {
   display: inline-block;
 }
 
+/* Product price on detail page */
 .product-detail-info .detail-price {
   font-family: var(--font-display);
   font-size: 36px;
   margin-bottom: 16px;
 }
 
+/* Product description */
 .product-detail-info .detail-desc {
   font-size: 15px;
   color: var(--text-secondary);
@@ -931,6 +1058,7 @@ footer {
   margin-bottom: 24px;
 }
 
+/* Product option box (e.g., size/type info) */
 .product-detail-info .detail-option {
   font-size: 13px;
   color: var(--text-secondary);
@@ -941,10 +1069,12 @@ footer {
   border: 1px solid var(--border);
 }
 
+/* Highlighted text inside option */
 .product-detail-info .detail-option strong {
   color: var(--text-primary);
 }
 
+/* Add to cart button */
 .btn-add-cart {
   background: var(--text-primary);
   color: var(--bg);
@@ -958,17 +1088,20 @@ footer {
   transition: background var(--transition), transform 0.15s;
 }
 
+/* Hover effect for add to cart */
 .btn-add-cart:hover {
   background: var(--accent);
   transform: translateY(-1px);
 }
 
+/* Theme switcher container */
 .theme-switcher {
   display: flex;
   gap: 8px;
   margin-bottom: 24px;
 }
 
+/* Theme selection buttons */
 .theme-btn {
   padding: 8px 16px;
   border: 1px solid var(--border);
@@ -982,6 +1115,7 @@ footer {
   transition: all var(--transition);
 }
 
+/* Active + hover state for theme buttons */
 .theme-btn:hover,
 .theme-btn.active {
   background: var(--text-primary);
@@ -989,6 +1123,7 @@ footer {
   border-color: var(--text-primary);
 }
 
+/* Help page navigation */
 .help-nav {
   display: flex;
   gap: 8px;
@@ -996,6 +1131,7 @@ footer {
   margin-bottom: 32px;
 }
 
+/* Help navigation links */
 .help-nav a {
   padding: 8px 16px;
   border: 1px solid var(--border);
@@ -1009,6 +1145,7 @@ footer {
   transition: all var(--transition);
 }
 
+/* Active + hover state for help links */
 .help-nav a:hover,
 .help-nav a.active {
   background: var(--text-primary);
@@ -1016,6 +1153,7 @@ footer {
   border-color: var(--text-primary);
 }
 
+/* Help content container */
 .help-content {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1024,6 +1162,7 @@ footer {
   line-height: 1.8;
 }
 
+/* Help section headings */
 .help-content h2 {
   font-family: var(--font-display);
   font-size: 24px;
@@ -1031,10 +1170,12 @@ footer {
   margin-top: 24px;
 }
 
+/* First heading spacing fix */
 .help-content h2:first-child {
   margin-top: 0;
 }
 
+/* Subheadings in help section */
 .help-content h3 {
   font-size: 15px;
   font-weight: 600;
@@ -1042,6 +1183,7 @@ footer {
   margin-bottom: 8px;
 }
 
+/* Static content pages (e.g., about, terms) */
 .static-content {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1050,6 +1192,7 @@ footer {
   line-height: 1.8;
 }
 
+/* Static content headings */
 .static-content h2 {
   font-family: var(--font-display);
   font-size: 28px;
@@ -1057,25 +1200,30 @@ footer {
   margin-top: 28px;
 }
 
+/* First heading spacing fix */
 .static-content h2:first-child {
   margin-top: 0;
 }
 
+/* Breadcrumb navigation */
 .breadcrumb {
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
+/* Breadcrumb links */
 .breadcrumb a {
   color: var(--text-secondary);
   transition: color var(--transition);
 }
 
+/* Breadcrumb hover */
 .breadcrumb a:hover {
   color: var(--accent);
 }
 
+/* Outline style button */
 .btn-outline {
   background: transparent;
   border: 1px solid var(--border);
@@ -1089,16 +1237,19 @@ footer {
   transition: all var(--transition);
 }
 
+/* Hover effect for outline button */
 .btn-outline:hover {
   background: var(--text-primary);
   color: var(--bg);
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .product-detail {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .cart-item {
     flex-wrap: wrap;
   }
