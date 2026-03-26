@@ -1,64 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en" data-theme=""> <!-- root + theme -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Extra-Thick Premium Yoga Mat — $90 at APEX Sport. Non-slip premium." />
-  <meta name="keywords" content="Extra-Thick Premium Yoga Mat, Recovery, APEX Sport, fitness gear" />
-  <title>Extra-Thick Premium Yoga Mat — APEX Sport</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../css/styles.css" />
+  <meta charset="UTF-8" /> <!-- encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- responsive -->
+  <meta name="description" content="Extra-Thick Premium Yoga Mat — $90 at APEX Sport. Non-slip premium." /> <!-- SEO -->
+  <meta name="keywords" content="Extra-Thick Premium Yoga Mat, Recovery, APEX Sport, fitness gear" /> <!-- SEO -->
+  <title>Extra-Thick Premium Yoga Mat — APEX Sport</title> <!-- title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- font optimization -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- fonts -->
+  <link rel="stylesheet" href="../../css/styles.css" /> <!-- CSS -->
 </head>
 <body>
-  <nav>
+
+  <nav> <!-- navbar -->
     <div class="nav-inner">
-      <a href="../../index.html" class="logo">APE<span>X</span></a>
-      <ul class="nav-links">
+      <a href="../../index.html" class="logo">APE<span>X</span></a> <!-- logo -->
+      <ul class="nav-links"> <!-- links -->
         <li><a href="../products.html">Shop</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../../wiki/index.html">Help</a></li>
       </ul>
-      <div class="nav-actions">
-        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
-        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cart-count">0</span></button>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-        <a href="../login.html" class="nav-icon-btn" aria-label="Login"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+
+      <div class="nav-actions"> <!-- buttons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search">...</button> <!-- search -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart">...</button> <!-- cart -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">...</button> <!-- menu -->
+        <a href="../login.html" class="nav-icon-btn" aria-label="Login">...</a> <!-- login -->
       </div>
     </div>
   </nav>
-  <div class="mobile-menu" id="mobile-menu">
-    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+
+  <div class="mobile-menu" id="mobile-menu"> <!-- mobile menu -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button> <!-- close -->
     <a href="../products.html" onclick="toggleMenu()">Shop</a>
     <a href="../about.html" onclick="toggleMenu()">About</a>
     <a href="../../wiki/index.html" onclick="toggleMenu()">Help</a>
   </div>
 
-  <div class="product-detail">
-    <div class="product-detail-img">
+  <div class="product-detail"> <!-- product section -->
+
+    <div class="product-detail-img"> <!-- image -->
       <img src="../../images/yogaMat.png" alt="Extra-Thick Premium Yoga Mat">
     </div>
-    <div class="product-detail-info">
-      <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../products.html">Shop</a> / Extra-Thick Premium Yoga Mat</div>
-      <span class="detail-category">Recovery</span>
-      <h1>Extra-Thick Premium Yoga Mat</h1>
-      <div class="detail-price">$90</div>
-      <p class="detail-desc">6mm thick with non-slip dual-layer surface. Closed-cell construction prevents sweat absorption. Ideal for yoga, stretching, and floor work.</p>
-      <div class="detail-option"><strong>Selected Option:</strong> Non-slip premium</div>
-      <button class="btn-add-cart" onclick="addToCart(16)">Add to Cart</button>
+
+    <div class="product-detail-info"> <!-- info -->
+      <div class="breadcrumb"> <!-- path -->
+        <a href="../../index.html">Home</a> / 
+        <a href="../products.html">Shop</a> / 
+        Extra-Thick Premium Yoga Mat
+      </div>
+
+      <span class="detail-category">Recovery</span> <!-- category -->
+      <h1>Extra-Thick Premium Yoga Mat</h1> <!-- name -->
+      <div class="detail-price">$90</div> <!-- price -->
+      <p class="detail-desc">6mm thick with non-slip dual-layer surface. Closed-cell construction prevents sweat absorption. Ideal for yoga, stretching, and floor work.</p> <!-- description -->
+      <div class="detail-option"><strong>Selected Option:</strong> Non-slip premium</div> <!-- option -->
+      <button class="btn-add-cart" onclick="addToCart(16)">Add to Cart</button> <!-- add -->
     </div>
+
   </div>
 
-  <footer>
+  <footer> <!-- footer -->
     <div class="footer-inner">
       <div class="footer-top" style="display:flex; justify-content:center;">
         <div style="text-align:center; max-width:420px;">
-          <div class="footer-logo">APE<span>X</span></div>
-          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+          <div class="footer-logo">APE<span>X</span></div> <!-- logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- tagline -->
         </div>
       </div>
     </div>
   </footer>
-  <script src="../../js/main.js"></script>
+
+  <script src="../../js/main.js"></script> <!-- JS -->
 </body>
 </html>
