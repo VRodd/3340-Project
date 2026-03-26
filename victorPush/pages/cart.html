@@ -1,104 +1,176 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en" data-theme=""> <!-- Root HTML element with theme support -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Your APEX Sport shopping cart." />
-  <meta name="keywords" content="APEX Sport cart, checkout" />
-  <title>Cart — APEX Sport</title>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive scaling -->
+  <meta name="description" content="Your APEX Sport shopping cart." /> <!-- SEO description -->
+  <meta name="keywords" content="APEX Sport cart, checkout" /> <!-- SEO keywords -->
+  <title>Cart — APEX Sport</title> <!-- Page title -->
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
+
 <body>
 
+  <!-- Navigation bar -->
   <nav>
     <div class="nav-inner">
+
+      <!-- Logo linking to homepage -->
       <a href="../index.html" class="logo">APE<span>X</span></a>
+
+      <!-- Navigation links -->
       <ul class="nav-links">
         <li><a href="products.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="../wiki/index.html">Help</a></li>
       </ul>
+
+      <!-- Navigation action buttons -->
       <div class="nav-actions">
-        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
-        <button class="nav-icon-btn" onclick="window.location.reload()" aria-label="Cart"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cart-count">0</span></button>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-        <a href="login.html" class="nav-icon-btn" aria-label="Login"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+
+        <!-- Search button triggers toggleSearch() -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+
+        <!-- Cart button reloads page to refresh cart display -->
+        <button class="nav-icon-btn" onclick="window.location.reload()" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" id="cart-count">0</span> <!-- Displays number of items in cart -->
+        </button>
+
+        <!-- Hamburger menu button toggles mobile menu -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <!-- Login button -->
+        <a href="login.html" class="nav-icon-btn" aria-label="Login">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+
       </div>
     </div>
   </nav>
+
+  <!-- Mobile menu (shown/hidden via toggleMenu()) -->
   <div class="mobile-menu" id="mobile-menu">
     <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+
+    <!-- Mobile navigation links -->
     <a href="products.html" onclick="toggleMenu()">Shop</a>
     <a href="about.html" onclick="toggleMenu()">About</a>
     <a href="../wiki/index.html" onclick="toggleMenu()">Help</a>
   </div>
 
+  <!-- Main cart page content -->
   <div class="cart-page">
-    <h1 class="page-title">YOUR CART</h1>
-    <p class="page-subtitle">Review your items before checkout.</p>
+    <h1 class="page-title">YOUR CART</h1> <!-- Page heading -->
+    <p class="page-subtitle">Review your items before checkout.</p> <!-- Subtitle -->
+
+    <!-- Container where cart items will be dynamically inserted -->
     <div id="cart-items"></div>
+
+    <!-- Container where cart summary (subtotal, tax, total) will be inserted -->
     <div id="cart-summary-section"></div>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-inner">
       <div class="footer-top" style="display:flex; justify-content:center;">
         <div style="text-align:center; max-width:420px;">
-          <div class="footer-logo">APE<span>X</span></div>
-          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+          <div class="footer-logo">APE<span>X</span></div> <!-- Logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- Tagline -->
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- External JavaScript (handles cart storage, UI interactions, etc.) -->
   <script src="../js/main.js"></script>
+
   <script>
+    // Renders all cart items and summary on the page
     function renderCart() {
-      var container = document.getElementById("cart-items");
-      var summarySection = document.getElementById("cart-summary-section");
+      var container = document.getElementById("cart-items"); // Cart items container
+      var summarySection = document.getElementById("cart-summary-section"); // Summary container
+
+      // If cart is empty, show empty message
       if (cart.length === 0) {
         container.innerHTML = '<div class="cart-empty"><h2>CART IS EMPTY</h2><p>Add some gear to get started.</p><a href="products.html" class="btn-primary" style="display:inline-block; text-decoration:none;">Shop Now</a></div>';
         summarySection.innerHTML = "";
         return;
       }
+
+      // Generate HTML for each cart item
       container.innerHTML = cart.map(function(item) {
         return '<div class="cart-item">' +
-          '<div class="cart-item-img"><span>' + item.name.charAt(0) + '</span></div>' +
-          '<div class="cart-item-details"><h3>' + item.name + '</h3><p>$' + item.price + ' each</p></div>' +
+          '<div class="cart-item-img"><span>' + item.name.charAt(0) + '</span></div>' + // Placeholder image (first letter)
+          '<div class="cart-item-details"><h3>' + item.name + '</h3><p>$' + item.price + ' each</p></div>' + // Name + price
           '<div class="cart-item-qty">' +
-            '<button onclick="changeQty(' + item.id + ',-1)">−</button>' +
-            '<span>' + item.qty + '</span>' +
-            '<button onclick="changeQty(' + item.id + ',1)">+</button>' +
+            '<button onclick="changeQty(' + item.id + ',-1)">−</button>' + // Decrease quantity
+            '<span>' + item.qty + '</span>' + // Current quantity
+            '<button onclick="changeQty(' + item.id + ',1)">+</button>' + // Increase quantity
           '</div>' +
-          '<div class="cart-item-price">$' + (item.price * item.qty) + '</div>' +
-          '<button class="cart-item-remove" onclick="removeAndRender(' + item.id + ')">&times;</button>' +
+          '<div class="cart-item-price">$' + (item.price * item.qty) + '</div>' + // Total price for item
+          '<button class="cart-item-remove" onclick="removeAndRender(' + item.id + ')">&times;</button>' + // Remove item
         '</div>';
       }).join("");
-      var subtotal = getCartTotal();
-      var tax = Math.round(subtotal * 0.13 * 100) / 100;
+
+      // Calculate subtotal and tax
+      var subtotal = getCartTotal(); // Gets total price of items
+      var tax = Math.round(subtotal * 0.13 * 100) / 100; // 13% tax
+
+      // Render summary section
       summarySection.innerHTML =
         '<div class="cart-summary">' +
           '<div class="cart-summary-row"><span>Subtotal</span><span>$' + subtotal.toFixed(2) + '</span></div>' +
           '<div class="cart-summary-row"><span>Tax (13%)</span><span>$' + tax.toFixed(2) + '</span></div>' +
           '<div class="cart-summary-row total"><span>Total</span><span>$' + (subtotal + tax).toFixed(2) + '</span></div>' +
-          '<button class="btn-full" style="margin-top:16px;" onclick="showToast(\'Checkout not yet available\')">Checkout</button>' +
+          '<button class="btn-full" style="margin-top:16px;" onclick="showToast(\'Checkout not yet available\')">Checkout</button>' + // Placeholder checkout button
         '</div>';
     }
+
+    // Changes quantity of a cart item
     function changeQty(id, delta) {
-      var item = cart.find(function(i) { return i.id === id; });
+      var item = cart.find(function(i) { return i.id === id; }); // Find item by ID
       if (item) {
-        item.qty = Math.max(1, item.qty + delta);
-        saveCart();
-        renderCart();
+        item.qty = Math.max(1, item.qty + delta); // Ensure quantity is at least 1
+        saveCart(); // Save updated cart to storage
+        renderCart(); // Re-render cart UI
       }
     }
+
+    // Removes an item from the cart and re-renders
     function removeAndRender(id) {
-      removeFromCart(id);
-      renderCart();
+      removeFromCart(id); // Remove item from cart array/storage
+      renderCart(); // Update UI
     }
+
+    // When page loads, render the cart automatically
     document.addEventListener("DOMContentLoaded", renderCart);
   </script>
+
 </body>
 </html>
