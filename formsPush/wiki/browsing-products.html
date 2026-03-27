@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- Root element with optional theme -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design -->
+  <meta name="description" content="APEX Sport Help — Browsing Products" /> <!-- Page description -->
+  <meta name="keywords" content="APEX Sport help, Browsing Products" /> <!-- SEO keywords -->
+  <title>Browsing Products — APEX Sport Help</title> <!-- Browser tab title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect for fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- Google Fonts -->
+  <link rel="stylesheet" href="../css/styles.css" /> <!-- Main CSS -->
+</head>
+<body>
+  <nav> <!-- Navigation bar -->
+    <div class="nav-inner">
+      <a href="../index.php" class="logo">APE<span>X</span></a> <!-- Logo link -->
+      <ul class="nav-links"> <!-- Navigation links -->
+        <li><a href="../pages/products.html">Shop</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="index.php">Help</a></li>
+      </ul>
+      <div class="nav-actions"> <!-- Action buttons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg>...</svg></button> <!-- Search icon -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg>...</svg><span class="cart-count" id="cart-count">0</span></button> <!-- Cart icon + count -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg>...</svg></button> <!-- Mobile menu toggle -->
+        <a href="../pages/login.html" class="nav-icon-btn" aria-label="Login"><svg>...</svg></a> <!-- Login link -->
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu"> <!-- Mobile overlay menu -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button> <!-- Close button -->
+    <a href="../pages/products.html" onclick="toggleMenu()">Shop</a> <!-- Mobile links -->
+    <a href="../pages/about.html" onclick="toggleMenu()">About</a>
+    <a href="index.php" onclick="toggleMenu()">Help</a>
+  </div>
+  <div class="page-wrapper"> <!-- Main page wrapper -->
+    <div class="breadcrumb"><a href="index.php">Help</a> / Browsing Products</div> <!-- Breadcrumb navigation -->
+    <h1 class="page-title">Browsing Products</h1> <!-- Page heading -->
+    <div class="help-nav"> <!-- Help section navigation -->
+      <a href="getting-started.html">Getting Started</a>
+      <a href="browsing-products.html">Browsing Products</a>
+      <a href="cart-checkout.html">Cart &amp; Checkout</a>
+      <a href="account-management.html">Account Management</a>
+      <a href="updating-content.html">Updating Content</a>
+    </div>
+    <div class="help-content"> <!-- Help content -->
+      <h2>Finding Products</h2>
+      <p>Visit the <a href="../pages/products.html" style="color:var(--accent);">Shop page</a> to see all 20 products in our catalogue.</p>
+      <h3>Filter by Category</h3>
+      <p>Use the filter buttons at the top of the shop page to narrow products by category: Strength, Cardio, Recovery, or Accessories. Click "All" to see everything.</p>
+      <h3>Product Cards</h3>
+      <p>Each product card shows the product name, category, selected option, and price. Click any card to view the full product detail page.</p>
+      <h3>Product Detail Page</h3>
+      <p>The detail page shows a larger product view, full description, option details, and an "Add to Cart" button. Use the breadcrumb links at the top to navigate back.</p>
+    </div>
+  </div>
+  <footer> <!-- Page footer -->
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div> <!-- Footer logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- Footer tagline -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script> <!-- Main JavaScript file -->
+</body>
+</html>

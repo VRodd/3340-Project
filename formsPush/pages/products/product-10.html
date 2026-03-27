@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- root HTML with theme support -->
+<head>
+  <meta charset="UTF-8" /> <!-- character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- responsive scaling -->
+  <meta name="description" content="Resistance Parachute — $70 at APEX Sport. Adjustable belt." /> <!-- SEO description -->
+  <meta name="keywords" content="Resistance Parachute, Cardio, APEX Sport, fitness gear" /> <!-- SEO keywords -->
+  <title>Resistance Parachute — APEX Sport</title> <!-- page title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- font optimization -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- fonts -->
+  <link rel="stylesheet" href="../../css/styles.css" /> <!-- main stylesheet -->
+</head>
+<body>
+
+  <nav> <!-- navigation bar -->
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo">APE<span>X</span></a> <!-- logo -->
+      <ul class="nav-links"> <!-- nav links -->
+        <li><a href="../products.html">Shop</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../../wiki/index.html">Help</a></li>
+      </ul>
+
+      <div class="nav-actions"> <!-- icons/buttons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search">...</button> <!-- search button -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart">...</button> <!-- cart button -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">...</button> <!-- mobile menu -->
+        <a href="../login.html" class="nav-icon-btn" aria-label="Login">...</a> <!-- login -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu"> <!-- mobile menu -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button> <!-- close button -->
+    <a href="../products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../about.html" onclick="toggleMenu()">About</a>
+    <a href="../../wiki/index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <div class="product-detail"> <!-- product detail section -->
+
+    <div class="product-detail-img"> <!-- product image -->
+      <img src="../../images/parachute.png" alt="Resistance Parachute">
+    </div>
+
+    <div class="product-detail-info"> <!-- product info -->
+      <div class="breadcrumb"> <!-- navigation path -->
+        <a href="../../index.html">Home</a> / 
+        <a href="../products.html">Shop</a> / 
+        Resistance Parachute
+      </div>
+
+      <span class="detail-category">Cardio</span> <!-- category -->
+      <h1>Resistance Parachute</h1> <!-- product name -->
+      <div class="detail-price">$70</div> <!-- price -->
+      <p class="detail-desc">Adjustable belt fits all waist sizes with quick-release buckle.</p> <!-- description -->
+      <div class="detail-option"><strong>Selected Option:</strong> Adjustable belt</div> <!-- option -->
+      <button class="btn-add-cart" onclick="addToCart(10)">Add to Cart</button> <!-- add to cart -->
+    </div>
+
+  </div>
+
+  <footer> <!-- footer -->
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div> <!-- footer logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- tagline -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script> <!-- main JS -->
+</body>
+</html>

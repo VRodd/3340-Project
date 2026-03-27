@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- Root element; data-theme allows theme switching -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive scaling -->
+  <meta name="description" content="APEX Sport Help Center — guides for browsing, ordering, and managing your account." /> <!-- Page description -->
+  <meta name="keywords" content="APEX Sport help, FAQ, guide, wiki" /> <!-- SEO keywords -->
+  <title>Help Center — APEX Sport</title> <!-- Browser tab title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect for Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- Google Fonts -->
+  <link rel="stylesheet" href="../css/styles.css" /> <!-- Main CSS file -->
+</head>
+<body>
+
+  <nav> <!-- Main navigation bar -->
+    <div class="nav-inner">
+      <a href="../index.php" class="logo">APE<span>X</span></a> <!-- Logo -->
+      <ul class="nav-links"> <!-- Desktop navigation links -->
+        <li><a href="../pages/products.html">Shop</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="index.php">Help</a></li>
+      </ul>
+      <div class="nav-actions"> <!-- Action icons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg>...</svg></button> <!-- Search icon -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg>...</svg><span class="cart-count" id="cart-count">0</span></button> <!-- Cart icon with count -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg>...</svg></button> <!-- Hamburger menu for mobile -->
+        <a href="../pages/login.html" class="nav-icon-btn" aria-label="Login"><svg>...</svg></a> <!-- Login icon -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu"> <!-- Mobile overlay menu -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button> <!-- Close button -->
+    <a href="../pages/products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../pages/about.html" onclick="toggleMenu()">About</a>
+    <a href="index.php" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <div class="page-wrapper"> <!-- Main content wrapper -->
+    <h1 class="page-title">HELP CENTER</h1> <!-- Page heading -->
+    <p class="page-subtitle">Everything you need to know about using APEX Sport.</p> <!-- Page subtitle -->
+    
+    <div class="help-nav"> <!-- Help section navigation -->
+      <a href="getting-started.html">Getting Started</a>
+      <a href="browsing-products.html">Browsing Products</a>
+      <a href="cart-checkout.html">Cart &amp; Checkout</a>
+      <a href="account-management.html">Account Management</a>
+      <a href="updating-content.html">Updating Content</a>
+    </div>
+
+    <div class="help-content"> <!-- Main help content -->
+      <h2>Welcome to APEX Sport Help</h2>
+      <p>Use the navigation above to find guides on how to use the site. Each page covers a specific area — from browsing and shopping to managing your account.</p>
+    </div>
+  </div>
+
+  <footer> <!-- Page footer -->
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div> <!-- Footer logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- Footer tagline -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script> <!-- Main JavaScript -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kettlebell Set — $120 at APEX Sport. With weight plates." />
+  <meta name="keywords" content="Kettlebell Set, Strength, APEX Sport, fitness gear" />
+  <title>Kettlebell Set — APEX Sport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo">APE<span>X</span></a>
+      <ul class="nav-links">
+        <li><a href="../products.html">Shop</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../../wiki/index.html">Help</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg>…</svg></button>
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg>…</svg><span class="cart-count" id="cart-count">0</span></button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg>…</svg></button>
+        <a href="../login.html" class="nav-icon-btn" aria-label="Login"><svg>…</svg></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+    <a href="../products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../about.html" onclick="toggleMenu()">About</a>
+    <a href="../../wiki/index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <!-- Product Detail -->
+  <div class="product-detail">
+    <div class="product-detail-img">
+      <img src="../../images/kettle.png" alt="Kettlebell Set">
+    </div>
+    <div class="product-detail-info">
+      <div class="breadcrumb">
+        <a href="../../index.html">Home</a> / <a href="../products.html">Shop</a> / Kettlebell Set
+      </div>
+      <span class="detail-category">Strength</span>
+      <h1>Kettlebell Set</h1>
+      <div class="detail-price">$120</div>
+      <p class="detail-desc">5 - 50 lbs Kettlebell set with ridged handle for better grip</p>
+      <div class="detail-option"><strong>Selected Option:</strong> With weight plates</div>
+      <button class="btn-add-cart" onclick="addToCart(2)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div>
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- Root element, theme can be added -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive scaling -->
+  <meta name="description" content="APEX Sport Help — Cart &amp; Checkout" /> <!-- Page description -->
+  <meta name="keywords" content="APEX Sport help, Cart &amp; Checkout" /> <!-- SEO keywords -->
+  <title>Cart &amp; Checkout — APEX Sport Help</title> <!-- Browser tab title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect to speed font loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- Google Fonts -->
+  <link rel="stylesheet" href="../css/styles.css" /> <!-- Main CSS -->
+</head>
+<body>
+  <nav> <!-- Navigation bar -->
+    <div class="nav-inner">
+      <a href="../index.php" class="logo">APE<span>X</span></a> <!-- Logo -->
+      <ul class="nav-links"> <!-- Desktop nav links -->
+        <li><a href="../pages/products.html">Shop</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="index.php">Help</a></li>
+      </ul>
+      <div class="nav-actions"> <!-- Action icons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg>...</svg></button> <!-- Search -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg>...</svg><span class="cart-count" id="cart-count">0</span></button> <!-- Cart icon + count -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg>...</svg></button> <!-- Hamburger for mobile menu -->
+        <a href="../pages/login.html" class="nav-icon-btn" aria-label="Login"><svg>...</svg></a> <!-- Login -->
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu"> <!-- Mobile overlay menu -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button> <!-- Close mobile menu -->
+    <a href="../pages/products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../pages/about.html" onclick="toggleMenu()">About</a>
+    <a href="index.php" onclick="toggleMenu()">Help</a>
+  </div>
+  <div class="page-wrapper"> <!-- Main content wrapper -->
+    <div class="breadcrumb"><a href="index.php">Help</a> / Cart &amp; Checkout</div> <!-- Breadcrumb -->
+    <h1 class="page-title">Cart &amp; Checkout</h1> <!-- Page title -->
+    <div class="help-nav"> <!-- Help section nav -->
+      <a href="getting-started.html">Getting Started</a>
+      <a href="browsing-products.html">Browsing Products</a>
+      <a href="cart-checkout.html">Cart &amp; Checkout</a>
+      <a href="account-management.html">Account Management</a>
+      <a href="updating-content.html">Updating Content</a>
+    </div>
+    <div class="help-content"> <!-- Help content area -->
+      <h2>Using the Cart</h2>
+      <p>Click the bag icon in the navigation to go to your cart at any time.</p>
+      <h3>Adding Items</h3>
+      <p>From any product detail page, click "Add to Cart" to add the item. A toast notification will confirm the action. Items persist in your cart between visits using browser storage.</p>
+      <h3>Editing Quantities</h3>
+      <p>On the cart page, use the + and − buttons next to each item to change the quantity. The subtotal updates automatically.</p>
+      <h3>Removing Items</h3>
+      <p>Click the × button on the right side of any cart item to remove it.</p>
+      <h3>Order Summary</h3>
+      <p>The cart page displays your subtotal, estimated tax (13% HST), and total. The checkout feature will be available in a future update.</p>
+    </div>
+  </div>
+  <footer> <!-- Page footer -->
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div> <!-- Footer logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- Footer tagline -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script> <!-- Main JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- Root element; data-theme allows theme switching -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive scaling -->
+  <meta name="description" content="APEX Sport Help — Updating Content" /> <!-- Page description -->
+  <meta name="keywords" content="APEX Sport help, Updating Content" /> <!-- SEO keywords -->
+  <title>Updating Content — APEX Sport Help</title> <!-- Browser tab title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect for Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- Google Fonts -->
+  <link rel="stylesheet" href="../css/styles.css" /> <!-- Main CSS file -->
+</head>
+<body>
+
+  <!-- Main Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="logo">APE<span>X</span></a> <!-- Logo -->
+      <ul class="nav-links"> <!-- Desktop navigation links -->
+        <li><a href="../pages/products.html">Shop</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="index.html">Help</a></li>
+      </ul>
+      <div class="nav-actions"> <!-- Action icons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"><svg>...</svg></button> <!-- Search icon -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"><svg>...</svg><span class="cart-count" id="cart-count">0</span></button> <!-- Cart icon -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><svg>...</svg></button> <!-- Hamburger menu -->
+        <a href="../pages/login.html" class="nav-icon-btn" aria-label="Login"><svg>...</svg></a> <!-- Login icon -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+    <a href="../pages/products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../pages/about.html" onclick="toggleMenu()">About</a>
+    <a href="index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <!-- Page Content Wrapper -->
+  <div class="page-wrapper">
+    <div class="breadcrumb"><a href="index.html">Help</a> / Updating Content</div> <!-- Breadcrumbs -->
+    <h1 class="page-title">Updating Content</h1> <!-- Page title -->
+
+    <!-- Help Navigation -->
+    <div class="help-nav">
+      <a href="getting-started.html">Getting Started</a>
+      <a href="browsing-products.html">Browsing Products</a>
+      <a href="cart-checkout.html">Cart &amp; Checkout</a>
+      <a href="account-management.html">Account Management</a>
+      <a href="updating-content.html">Updating Content</a>
+    </div>
+
+    <!-- Help Content -->
+    <div class="help-content">
+      <h2>How to Update Site Content</h2>
+      <p>This guide is for site administrators who need to add, remove, or modify products and media.</p>
+
+      <h3>Adding a New Product</h3>
+      <p>Open <code>js/main.js</code> and locate the <code>products</code> array. Add a new object with the fields: <code>id</code>, <code>name</code>, <code>category</code>, <code>price</code>, <code>option</code>, and <code>img</code>. Then create a matching product detail HTML file in <code>pages/products/</code>.</p>
+
+      <h3>Changing Product Info</h3>
+      <p>Find the product in the <code>products</code> array by its <code>id</code> and edit the <code>name</code>, <code>price</code>, <code>option</code>, or <code>category</code> fields. Save the file — the shop page and search will update automatically.</p>
+
+      <h3>Updating Images</h3>
+      <p>Place new images in the <code>images/</code> directory. Reference them by filename in the product object or directly in HTML. Use copyright-free images only.</p>
+
+      <h3>Changing Themes</h3>
+      <p>Theme CSS variables are defined in <code>css/styles.css</code> under <code>:root</code>, <code>[data-theme="dark"]</code>, and <code>[data-theme="midnight"]</code>. Modify colors there to customize any theme.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div>
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script> <!-- Main JavaScript -->
+</body>
+</html>

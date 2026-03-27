@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- Root HTML element with language and theme attribute -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive scaling -->
+  <meta name="description" content="About APEX Sport — premium fitness gear for serious athletes. Our story, mission, and values." /> <!-- SEO description -->
+  <meta name="keywords" content="APEX Sport about, fitness brand, mission" /> <!-- SEO keywords -->
+  <title>About — APEX Sport</title> <!-- Page title -->
+
+  <!-- Google Fonts preload and import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  <nav>
+    <div class="nav-inner">
+      
+      <!-- Logo linking to homepage -->
+      <a href="../index.php" class="logo">APE<span>X</span></a>
+
+      <!-- Desktop navigation links -->
+      <ul class="nav-links">
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="../wiki/index.html">Help</a></li>
+      </ul>
+
+      <!-- Navigation action buttons -->
+      <div class="nav-actions">
+
+        <!-- Search button triggers toggleSearch() -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+
+        <!-- Cart button triggers toggleCart(), displays item count -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" id="cart-count">0</span> <!-- Dynamic cart count -->
+        </button>
+
+        <!-- Hamburger menu button triggers toggleMenu() -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <!-- Login button -->
+        <a href="login.html" class="nav-icon-btn" aria-label="Login">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu (hidden/shown via toggleMenu()) -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+
+    <!-- Mobile navigation links -->
+    <a href="products.html" onclick="toggleMenu()">Shop</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="../wiki/index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <!-- Main page wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Page title and subtitle -->
+    <h1 class="page-title">ABOUT APEX</h1>
+    <p class="page-subtitle">Engineered for performance. Built to last.</p>
+
+    <!-- Theme switcher section -->
+    <div style="margin-bottom:28px;">
+      <p style="font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-secondary); margin-bottom:10px;">
+        Site Theme
+      </p>
+
+      <!-- Buttons call setTheme() with different theme values -->
+      <div class="theme-switcher">
+        <button class="theme-btn" data-theme="" onclick="setTheme('')">Default</button>
+        <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')">Dark</button>
+        <button class="theme-btn" data-theme="midnight" onclick="setTheme('midnight')">Midnight</button>
+      </div>
+    </div>
+
+    <!-- Static informational content -->
+    <div class="static-content">
+
+      <h2>Our Story</h2>
+      <p>APEX Sport was founded with a single goal: to provide serious athletes with equipment that matches their intensity. We believe that the gear you train with should never be the limiting factor in your performance.</p>
+      <p>Based in Windsor, Ontario, our team sources and tests every product in our catalogue. From adjustable dumbbells to percussion massage guns, each item is selected for durability, function, and value.</p>
+
+      <h2>What We Offer</h2>
+      <p>Our catalogue features 20 premium products across four categories: Strength, Cardio, Recovery, and Accessories. Every product comes in a carefully selected premium option — we cut the entry-level filler so you only see gear worth buying.</p>
+
+      <h2>Our Mission</h2>
+      <p>Train harder. Go further. We exist to remove the friction between you and your best performance. No fluff, no gimmicks — just equipment that works as hard as you do.</p>
+
+      <h2>COMP 3340 Project</h2>
+      <p>This website was developed as a group project for COMP 3340 (World Wide Web Information Systems Design) at the University of Windsor. It demonstrates a fully functional e-commerce front-end built with HTML5, CSS3, and JavaScript, featuring responsive design, dynamic product pages, cart functionality, theme switching, and a comprehensive help wiki.</p>
+
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+
+          <!-- Footer logo and tagline -->
+          <div class="footer-logo">APE<span>X</span></div>
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript file (handles menu, cart, theme, etc.) -->
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
