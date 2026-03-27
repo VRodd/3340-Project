@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- root + theme -->
+<head>
+  <meta charset="UTF-8" /> <!-- encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- responsive -->
+  <meta name="description" content="Spiky Massage Ball Set — $30 at APEX Sport. Multiple sizes." /> <!-- SEO -->
+  <meta name="keywords" content="Spiky Massage Ball Set, Recovery, APEX Sport, fitness gear" /> <!-- SEO -->
+  <title>Spiky Massage Ball Set — APEX Sport</title> <!-- title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- font optimization -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- fonts -->
+  <link rel="stylesheet" href="../../css/styles.css" /> <!-- CSS -->
+</head>
+<body>
+
+  <nav> <!-- navbar -->
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo">APE<span>X</span></a> <!-- logo -->
+      <ul class="nav-links"> <!-- links -->
+        <li><a href="../products.html">Shop</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../../wiki/index.html">Help</a></li>
+      </ul>
+
+      <div class="nav-actions"> <!-- buttons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search">...</button> <!-- search -->
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart">...</button> <!-- cart -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">...</button> <!-- menu -->
+        <a href="../login.html" class="nav-icon-btn" aria-label="Login">...</a> <!-- login -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu"> <!-- mobile menu -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button> <!-- close -->
+    <a href="../products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../about.html" onclick="toggleMenu()">About</a>
+    <a href="../../wiki/index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <div class="product-detail"> <!-- product section -->
+
+    <div class="product-detail-img"> <!-- image -->
+      <img src="../../images/massageBalls.png" alt="Spiky Massage Ball Set">
+    </div>
+
+    <div class="product-detail-info"> <!-- info -->
+      <div class="breadcrumb"> <!-- path -->
+        <a href="../../index.html">Home</a> / 
+        <a href="../products.html">Shop</a> / 
+        Spiky Massage Ball Set
+      </div>
+
+      <span class="detail-category">Recovery</span> <!-- category -->
+      <h1>Spiky Massage Ball Set</h1> <!-- name -->
+      <div class="detail-price">$30</div> <!-- price -->
+      <p class="detail-desc">Set includes three sizes for targeting different muscle groups. Spiky surface stimulates blood flow and breaks up muscle adhesions.</p> <!-- description -->
+      <div class="detail-option"><strong>Selected Option:</strong> Multiple sizes</div> <!-- option -->
+      <button class="btn-add-cart" onclick="addToCart(12)">Add to Cart</button> <!-- add -->
+    </div>
+
+  </div>
+
+  <footer> <!-- footer -->
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;">
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div> <!-- logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- tagline -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script> <!-- JS -->
+</body>
+</html>

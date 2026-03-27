@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""> <!-- Root HTML element; 'lang' for accessibility, 'data-theme' for light/dark mode -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Mobile responsiveness -->
+  <meta name="description" content="Adjustable Agility Ladder — $75 at APEX Sport." /> <!-- SEO description -->
+  <meta name="keywords" content="Adjustable Agility Ladder, Cardio, APEX Sport, fitness gear" /> <!-- SEO keywords -->
+  <title>Adjustable Agility Ladder + Cones — APEX Sport</title> <!-- Page title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /> <!-- Google Fonts -->
+  <link rel="stylesheet" href="../../css/styles.css" /> <!-- Main CSS -->
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="../../index.php" class="logo">APE<span>X</span></a> <!-- Logo linking to homepage -->
+      <ul class="nav-links"> <!-- Navigation links -->
+        <li><a href="../products.html">Shop</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../../wiki/index.html">Help</a></li>
+      </ul>
+      <div class="nav-actions"> <!-- Search, cart, menu, login buttons -->
+        <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Search"> <!-- Search button -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart"> <!-- Cart button -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" id="cart-count">0</span> <!-- Number of items in cart -->
+        </button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"> <!-- Mobile hamburger menu -->
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <a href="../login.php" class="nav-icon-btn" aria-label="Login"> <!-- Login button -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu"> <!-- Mobile menu overlay -->
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&#x2715;</button>
+    <a href="../products.html" onclick="toggleMenu()">Shop</a>
+    <a href="../about.html" onclick="toggleMenu()">About</a>
+    <a href="../../wiki/index.html" onclick="toggleMenu()">Help</a>
+  </div>
+
+  <div class="product-detail"> <!-- Product section -->
+    <div class="product-detail-img">
+      <img src="../../images/agilityLadder.png" alt="Adjustable Agility Ladder"> <!-- Product image -->
+    </div>
+    <div class="product-detail-info">
+      <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../products.html">Shop</a> / Adjustable Agility Ladder</div> <!-- Breadcrumb -->
+      <span class="detail-category">Cardio</span> <!-- Product category -->
+      <h1>Adjustable Agility Ladder</h1> <!-- Product name -->
+      <div class="detail-price">$75</div> <!-- Price -->
+      <p class="detail-desc">Adjustable rung spacing lets you customize drill patterns.</p> <!-- Description -->
+      <div class="detail-option"><strong>Selected Option:</strong> 6 ft long</div> <!-- Option/variant -->
+      <button class="btn-add-cart" onclick="addToCart(9)">Add to Cart</button> <!-- Add to cart with product ID -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top" style="display:flex; justify-content:center;"> <!-- Footer top centered -->
+        <div style="text-align:center; max-width:420px;">
+          <div class="footer-logo">APE<span>X</span></div> <!-- Footer logo -->
+          <p class="footer-tagline">Premium fitness gear for athletes who demand more.</p> <!-- Footer tagline -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script> <!-- Main JS file -->
+</body>
+</html>
